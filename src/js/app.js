@@ -2,4 +2,4 @@
 let a = () =>{
     console.log(1)
 }
-a()
+require('../scss/index.scss')

@@ -62,7 +62,7 @@
 /******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
 /******/
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "/public";
+/******/ 	__webpack_require__.p = "";
 /******/
 /******/
 /******/ 	// Load entry module and return exports
@@ -76,9 +76,20 @@
   !*** ./src/js/app.js ***!
   \***********************/
 /*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("\nvar a = function a() {\n    console.log(1);\n};\n__webpack_require__(/*! ../scss/index.scss */ \"./src/scss/index.scss\");\n\n//# sourceURL=webpack:///./src/js/app.js?");
+
+/***/ }),
+
+/***/ "./src/scss/index.scss":
+/*!*****************************!*\
+  !*** ./src/scss/index.scss ***!
+  \*****************************/
+/*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("\nlet a = () =>{\n    console.log(1)\n}\na()\n\n//# sourceURL=webpack:///./src/js/app.js?");
+eval("// removed by extract-text-webpack-plugin\n\n//# sourceURL=webpack:///./src/scss/index.scss?");
 
 /***/ })
 
