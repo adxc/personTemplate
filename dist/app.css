@@ -1,17 +1,6 @@
 .test{
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    width: 300px;
-    height: 300px;
-    border: 1px solid #000;  
-}  
-    .test div{
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-    }  
-    .test div p{
-            display: grid;
-            color: #003;
-        }
+    margin: 0 auto;
+    width: 500px;
+    height: 500px;
+    border: 1px solid black;  
+}

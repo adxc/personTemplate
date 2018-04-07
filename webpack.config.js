@@ -20,25 +20,28 @@ module.exports = {
         include: path.resolve(__dirname, './src/js'),
       },
       {
-        test:/\.scss$/,
-        use:ExtractTextPlugin.extract({
-          use:[{
-            loader:'css-loader',
-          },
-          {
-            loader:'postcss-loader'
-          }
+        test: /\.scss$/,
+        use: ExtractTextPlugin.extract({
+          use: [{
+              loader: 'css-loader',
+            },
+            {
+              loader: 'postcss-loader'
+            }
           ]
-        }), 
+        }),
       }
     ]
   },
-  plugins:[
+  plugins: [
+    new webpack.ProvidePlugin({ //加载jq
+      $: 'jquery'
+    }),
     new HTMLPlugin({
-      template:'./src/html/index.html'
+      template: './src/html/index.html'
     }),
     new ExtractTextPlugin({
-      filename:`[name].css`
+      filename: `[name].css`
     }),
     new webpack.NamedModulesPlugin(),
     new webpack.HotModuleReplacementPlugin()
@@ -49,14 +52,14 @@ module.exports = {
     historyApiFallback: true, // 是否开发 HTML5 History API 网页
     hot: true, // 是否开启模块热替换功能
     https: false, // 是否开启 HTTPS 模式
-    port:4000,
-    },
-    profile: true, // 是否捕捉 Webpack 构建的性能信息，用于分析什么原因导致构建性能不佳
+    port: 4000,
+  },
+  profile: true, // 是否捕捉 Webpack 构建的性能信息，用于分析什么原因导致构建性能不佳
 
-    cache: false, // 是否启用缓存提升构建速度
+  cache: false, // 是否启用缓存提升构建速度
 
-    watch: true, // 是否开始
-    watchOptions: { // 监听模式选项
+  watch: true, // 是否开始
+  watchOptions: { // 监听模式选项
     // 不监听的文件或文件夹，支持正则匹配。默认为空
     ignored: /node_modules/,
     // 监听到变化发生后会等300ms再去执行动作，防止文件更新太快导致重新编译频率太高
